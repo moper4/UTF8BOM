@@ -37,8 +37,9 @@ public class TestUtf8WithBom {
 
     @Test
     public void testBadDecode() {
-        var s = new String("Abc".getBytes(StandardCharsets.UTF_8), charset);
-        Assert.assertNotEquals("Abc", s);
+        var s = new String("A".getBytes(StandardCharsets.UTF_8), charset);
+        System.out.println(s);
+        Assert.assertNotEquals("A", s);
     }
 
     @Test

@@ -28,6 +28,7 @@ public class Utf8WithBom extends Charset {
         return new CharsetDecoder(this, decoder.averageCharsPerByte(), decoder.maxCharsPerByte()) {
             private boolean findBom = false;
 
+            // 依赖JDK内部具体实现
             @Override
             protected CoderResult decodeLoop(ByteBuffer in, CharBuffer out) {
                 if (findBom) {
